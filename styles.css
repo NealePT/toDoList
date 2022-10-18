@@ -13,5 +13,21 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 html {
   background-color: #0D1117;
   color: #F0F6FC;
-  font-family: Helvetica, Arial, sans-serif;}
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin: 100px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+  background: #F0F6FC;
+  color: #0D1117;
+}
 
