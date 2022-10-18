@@ -24,7 +24,7 @@ h1 {
 .wrapper {
   max-width: 80%;
   margin: 100px auto;
-  border: 3px solid #F0F6FC;
+  /* border: 3px solid #F0F6FC; */
 }
 
 .header {
@@ -95,33 +95,27 @@ h1 {
 .taskListHeader {
   position: relative;
   width: 100%;
-}
-
-.taskListHeader h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
-  background: #0D1117;
-  color: #F0F6FC;
-  width: 100%;
+  background: #F0F6FC;
 }
 
 .removeCompleteButton {
-  position: absolute;
-  right: 5vw;
-  top: 16px;
+  position: relative;
+  left: 3vw;
+  top: 0px;
   border: 0;
   background: 0;
-  color: #F0F6FC;
-  font-size: 0.5em;
+  color: #0D1117;
+  font-size: 0.8em;
   cursor: pointer;
   transition: color 150ms ease-in-out;
   outline: none;
+  border: 2px solid #0D1117;
+  border-radius: 10px;
 }
 
 .removeCompleteButton:hover {
-  color: #0D1117;
+  color: #F0F6FC;
+  background: #0D1117;
 }
 
 .removeCompleteButton:active {
@@ -136,7 +130,7 @@ h1 {
 
 .taskList {
   padding: 15px 25px 25px 25px;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .taskList li {
@@ -144,6 +138,8 @@ h1 {
   cursor: pointer;
   padding: 10px 0;
   border-bottom: 1px solid #7474743b;
+  border-top: 1px solid #7474743b;
+
 }
 
 .customCheckbox {
