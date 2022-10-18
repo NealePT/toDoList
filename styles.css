@@ -16,9 +16,15 @@ html {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
 .wrapper {
   max-width: 80%;
   margin: 100px auto;
+  border: 3px solid #F0F6FC;
 }
 
 .header {
@@ -29,5 +35,167 @@ html {
   width: 100%;
   background: #F0F6FC;
   color: #0D1117;
+  border-bottom: 2px solid #0D1117;
 }
 
+.addTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: #F0F6FC;
+  color: #0D1117;
+  width: 100%;
+}
+
+.addTask input {
+  border: 0;
+  border-bottom: 1px solid #272727;
+  outline: none;
+  transition: border 150ms ease-in-out;
+  background-color: #F0F6FC;
+}
+
+.addTask input::placeholder {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+.taskList input {
+  position: absolute;
+  opacity: 0;
+  background-color: #F0F6FC;
+}
+
+.addTask input:focus {
+  border-bottom-width: 2px;
+}
+
+.addTask input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.addTaskButton {
+  border: 0;
+  background: 0;
+  color: #0D1117;
+  cursor: pointer;
+  outline: none;
+  transition: color 150ms ease-in-out;
+}
+
+.addTaskButton:hover {
+  color: #0D1117;
+}
+
+.addTaskButton:active {
+  color: #ff652f;
+}
+
+.taskListHeader {
+  position: relative;
+  width: 100%;
+}
+
+.taskListHeader h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background: #0D1117;
+  color: #F0F6FC;
+  width: 100%;
+}
+
+.removeCompleteButton {
+  position: absolute;
+  right: 5vw;
+  top: 16px;
+  border: 0;
+  background: 0;
+  color: #F0F6FC;
+  font-size: 0.5em;
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+  outline: none;
+}
+
+.removeCompleteButton:hover {
+  color: #0D1117;
+}
+
+.removeCompleteButton:active {
+  color: #ff652f;
+}
+
+.taskListWrapper {
+  background: #F0F6FC;
+  color: #272727;
+  width: 100%;
+}
+
+.taskList {
+  padding: 15px 25px 25px 25px;
+  margin-bottom: 0px;
+}
+
+.taskList li {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #7474743b;
+}
+
+.customCheckbox {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.5em;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+
+.taskList li:hover .custom-checkbox {
+  transform: scale(1.2);
+  color: #747474;
+}
+
+.taskList li:active .custom-checkbox {
+  transform: scale(1);
+  color: #ff652f;
+}
+
+.taskList label {
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label .customCheckbox {
+  transform: scale(1);
+  color: #ff652f;
+  opacity: 0.6;
+}
+
+.checkMark {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  z-index: 1;
+}
+
+[type="checkbox"]:checked + label .checkMark,
+[type="checkbox"]:checked + label {
+  opacity: 0.6;
+}
+
+.taskList label:hover {
+  color: #747474;
+}
